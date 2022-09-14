@@ -90,28 +90,7 @@ code {
     display: block;
   }
 }
-.category-menu{
-  padding-top: 15px;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.category-menu li{
-  cursor: pointer;
-  padding: 5px 8px;
-  color:rgb(194, 129, 191) ;
-  margin-right:10px;
-}
 
-.category-menu li a{
-  text-decoration: none;
-  background: rgb(85, 225, 235);
-  padding:  8px 10px;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 18px;
-}
 .center{
   display: flex;
   justify-content: center;

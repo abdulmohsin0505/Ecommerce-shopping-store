@@ -1,0 +1,21 @@
+@media screen and (max-width:550px){
+    .cart-image{
+        width: 100px;
+        height: 100px;
+    }
+    .cart-btn{
+        margin-left:10px;
+    }
+    .remove-btn{
+        margin-left:10px;
+    }
+    .cart-price{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:400px){
+    .remove-btn{
+        margin-top:10px;
+        margin-left:0;
+    }
+}

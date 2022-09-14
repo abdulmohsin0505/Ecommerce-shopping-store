@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-
+import { Link } from 'react-router-dom';
+import "./Style/Category.css"
 function Category({ products, setProduct }) {
     const array = []
     products.map(data => array.push(data.category))
@@ -27,13 +28,13 @@ function Category({ products, setProduct }) {
                 categories.map((category, idx) => {
                     return (
                         <li key={idx}>
-                            <a 
+                            <Link to=""
                             onClick={() => filterProduct(category)}
                             
                              className='menu-links'
                              >
                                 {category}
-                            </a>
+                            </Link>
                         </li>
                     )
                 })

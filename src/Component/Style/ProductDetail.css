@@ -1,0 +1,16 @@
+@media screen and (max-width:530px) {
+    .products-image {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+@media screen and (max-width:477px) {
+    .center{
+        flex-direction: column;
+    }
+    .products-desc{
+        margin: 0 ;
+    }
+}

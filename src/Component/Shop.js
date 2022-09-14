@@ -20,10 +20,16 @@ function Shop() {
         dispatch(fetchProduct())
     }, [dispatch])
 
-    return (        
+    return (
         <Container className='mt-5 py-3'>
             <Row className="center">
-            <Category products={products} setProduct={setProduct} />
+                <div className='text-center fst-italic my-3 mt-5'>
+                    <h3 className='text-success d-inline border-bottom border-warning pb-2 '>All Categories</h3>
+                </div>
+                <Category products={products} setProduct={setProduct} />
+                <div className='text-center fst-italic  my-3'>
+                    <h3 className='text-success d-inline border-bottom border-warning pb-2'>All Products</h3>
+                </div>
                 <Products products={products} product={product} />
             </Row>
         </Container>

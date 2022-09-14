@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Button, Col, Container } from 'reactstrap';
 import {removeCartProduct,incQuantity} from "../Redux/ACTION/ActionTypes"
 import CartPrice from './CartPrice';
+import "./Style/Cart.css"
 
 function Cart() {
   const carts = useSelector(state => state.cart.cart)
@@ -19,20 +20,20 @@ function Cart() {
                 <div key={id}
                className="d-flex justify-content-center align-items-center mt-3">
                 <div className=''>
-                  <img src={image} alt={category} height="150px" width="150px" />
+                  <img src={image} alt={category} height="150px" width="150px" className="cart-image"/>
                 </div>
                 <div className='ms-3'>
                   <h6>{category}</h6>
-                  <strong>Rs - {price} $</strong>
+                  <strong className='cart-price'>Rs - {price} $</strong>
                 </div>
-                <div className='m-5'>
+                <div className='m-sm-5 cart-btn'>
                   <Button
                    size='sm'
                    onClick={() =>dispatch(incQuantity(id,-1))}
                    >
                     -
                    </Button>
-                  <strong>{quantity}</strong>
+                  <strong className='m-1'>{quantity}</strong>
                   <Button
                    size='sm' 
                    onClick={() =>dispatch(incQuantity(id,1))}
@@ -40,7 +41,7 @@ function Cart() {
                   <Button
                     size='sm' color='danger'
                     onClick={() => dispatch(removeCartProduct(cart))}
-                    className="ms-2"
+                    className="ms-sm-2 remove-btn"
                   >
                     Remove
                   </Button>
