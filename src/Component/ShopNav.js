@@ -4,18 +4,13 @@ import Shop from './Shop';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from "react-redux"
 import { Badge } from "reactstrap"
+import { useGlobalContext } from './Context';
 
 function ShopNav() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const [closBtn, setCloseBtn] = useState(false)
+  const {isSidebarOpen,closeSidebar,openSidebar} = useGlobalContext()
   const carts = useSelector(state => state.cart.cart)
 
-  const openSidebar = () => {
-    setIsSidebarOpen(true)
-  }
-  const closeSidebar = () => {
-    setIsSidebarOpen(false)
-  }
+ 
 
   return (
 
