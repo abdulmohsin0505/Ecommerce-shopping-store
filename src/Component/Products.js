@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { addProduct } from '../Redux/ACTION/ActionTypes'
+import "./Style/Products.css"
 import {
     Button,
     Card,
@@ -15,7 +16,8 @@ function Products({ product, products }) {
     const dispatch = useDispatch()
 
     const cartStyle = { 
-        height: "320px", width: "200px" 
+        height: "100%", width: "200px",
+        
     }
 
     return (
@@ -25,11 +27,11 @@ function Products({ product, products }) {
                 const reducedTitle = title.slice(0, 18)
                 return (
 
-                    <Col xs="5" sm="4" md="4" lg="3" xl="2"
-                        className="m-xl-2 m-lg-1 m-sm-1 m-md-1 "
+                    <Col 
+                        className="my-md-2 my-sm-2 ms-sm-1 products"
                         key={id}
                     >
-                        <Card style={cartStyle}>
+                        <Card style={cartStyle} className="product-cart">
                             <Link to={`/product/${id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
                                 <CardBody>
                                     <img src={image} alt={title} height="150px" width="150px" />

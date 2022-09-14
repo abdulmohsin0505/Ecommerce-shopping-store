@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Button } from 'reactstrap'
 import { removeProduct, fetchProd, addProduct } from '../Redux/ACTION/ActionTypes'
 import Shop from './Shop'
+import "./Style/ProductDetail.css"
 
 function ProductDetail() {
   const product = useSelector(state => state.product)
@@ -23,10 +24,10 @@ function ProductDetail() {
   return (
     <div className='container mt-5 pt-5 center'>
       <div className='float-start'>
-        <img src={image} alt={category} width="300px" height="400px" />
+        <img src={image} alt={category} width="250px" height="300px" className='products-image'/>
       </div>
-      <div className='float-start m-5 pt-3'>
-        <h3>{category}</h3>
+      <div className='float-start m-md-5 ms-sm-5 pt-3 float-sm-none products-desc'>
+        <h3 className='product-title'>{category}</h3>
         <p>{title}</p>
         <strong>Rating {rating && rating.rate}</strong><br/>
         <h6>Rs - {price} $</h6>

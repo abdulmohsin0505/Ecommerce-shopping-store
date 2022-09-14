@@ -1,0 +1,12 @@
+
+@media screen and (max-width:767px) {
+    .products{
+        margin-left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-cart{
+        margin: 15px 0px;
+    }
+    }
