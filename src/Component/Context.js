@@ -6,7 +6,6 @@ const Context = React.createContext()
 export const ContextProvider = ({ children }) => {
     const [total, setTotal] = useState(0)
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-    const [closBtn, setCloseBtn] = useState(false)
 
     const TotalCartPrice = (carts) => {
         let totalPrice = 0;

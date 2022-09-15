@@ -13,7 +13,7 @@ function App() {
       <Router>
       <ShopNav/>
       <Routes>
-        <Route path="/" element={<Shop/>}/>
+        <Route path="/react-redux-shopping-store%20" element={<Shop/>}/>
         <Route path="/product/:productId" element={<ProductDetail/>}/>
         <Route path="/cart" element={<Cart/>}/>
       </Routes>

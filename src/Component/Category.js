@@ -18,6 +18,7 @@ function Category({ products, setProduct }) {
         const newProduct = products.filter(product => product.category === category)
         setProduct(newProduct)
     }
+    
     useEffect(() => {
         setCategories(allCategories)
         setProduct(products)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Cart from './Cart'
 import Shop from './Shop';
 import { NavLink } from 'react-router-dom';
@@ -10,13 +10,11 @@ function ShopNav() {
   const {isSidebarOpen,closeSidebar,openSidebar} = useGlobalContext()
   const carts = useSelector(state => state.cart.cart)
 
- 
-
   return (
 
     <nav className="navbar navbar-expand-md bg-info fixed-top shadow">
       <div className="container-fluid ">
-        <NavLink to="/" element={<Shop />} id="logo">Shop</NavLink>
+        <NavLink to="/react-redux-shopping-store%20" element={<Shop />} id="logo">Shop</NavLink>
 
         <div className={`
         ${"navigation-bar"} 
@@ -27,13 +25,13 @@ function ShopNav() {
 
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink to="/" element={<Shop />}>Home</NavLink>
+              <NavLink to="/react-redux-shopping-store%20" element={<Shop />}>Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/" element={<Shop />}>Products</NavLink>
+              <NavLink to="/react-redux-shopping-store%20" element={<Shop />}>Products</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/" element={<Shop />}>About</NavLink>
+              <NavLink to="/react-redux-shopping-store%20" element={<Shop />}>About</NavLink>
             </li>
             <li className="nav-item hamburger-cart">
               <NavLink to="/cart" element={<Cart />}>Cart</NavLink>
